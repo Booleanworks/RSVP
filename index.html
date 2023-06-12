@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login page</title>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-<form>
-    <label for="pswd">Enter your password: </label>
-    <input type="password" id="pswd">
-    <input type="button" value="Submit" onclick="checkPswd();" />
-</form>
-<!--Function to check password the already set password is admin-->
+<div class="container">
+    <h1>Login Page</h1>
+    <form>
+        <label for="pswd">Enter your password:</label>
+        <input type="password" id="pswd">
+        <input type="submit" value="Submit" onclick="checkPswd();" />
+    </form>
+</div>
+<!--Function to check if the password matches the expected password-->
 <script type="text/javascript">
     function checkPswd() {
         var confirmPassword = "7828";
         var password = document.getElementById("pswd").value;
         if (password == confirmPassword) {
-             window.location="welcome.html";
+            window.location="welcome.html";
         }
         else{
             alert("Passwords do not match.");
