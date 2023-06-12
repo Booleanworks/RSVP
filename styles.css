@@ -1,6 +1,10 @@
+
+
+
 body {
     background-color: #747474;
-    font-family: Arial, sans-serif;
+    /*font-family: Arial, sans-serif;*/
+    font-family: 'Pixeled', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,6 +41,7 @@ input[type="password"] {
 }
 
 input[type="submit"] {
+    font-family: 'Pixeled', sans-serif;
     width: 100%;
     padding: 10px;
     background-color: #747474;
