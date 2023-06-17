@@ -17,32 +17,22 @@
             background-position: center;
             margin: 0px;
         }
-
-        input[type="password"] {
-            background-color: rgba(255, 255, 255, 0);
-        }
     </style>
 </head>
 <body>
-
-    <form class="nes-container">
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control nes-input" id="pswd" placeholder="0000">
-        </div>
-        <div class="form-group form-check">
-        </div>
-        <button type="submit" class="nes-btn is-primary" onclick="checkPswd(event);">Submit</button>
-      </form>
-
-
-
+    <div class="neo-container">
+        <form>
+            <label for="pswd"><center>Enter your password:<center></label>
+            <input type="password" id="pswd">
+            <input type="submit" value="Submit" onclick="checkPswd(event);">
+        </form>
+    </div>
     <!--Function to check if the password matches the expected password-->
     <script type="text/javascript">
         function checkPswd(event) {
             event.preventDefault(); // Prevents the form from submitting
     
-            var confirmPassword = "1993";
+            var confirmPassword = "7828";
             var password = document.getElementById("pswd").value;
             if (password == confirmPassword) {
                 window.location.href = "welcome.html";
