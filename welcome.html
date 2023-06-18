@@ -1,9 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome page</title>
+    <title>GIF Background</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-image: url('images/Freddie_and_sue.gif');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 18%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        
+
+        @media (max-width: 600px) {
+            form {
+                max-width: 80%;
+            }
+        }
+    </style>
+</head>
 </head>
 <body>
-<h1>Welcome!! you entered a right password</h1>
+    <div class="lists">
+        <ul class="nes-list is-disc">
+          <li>Good morning.</li>
+          <li>Thou hast had a good night's sleep, I hope.</li>
+          <li>Thou hast had a good afternoon</li>
+          <li>Good night.</li>
+        </ul>
+      </div>
+      
+      <div class="lists">
+        <ul class="nes-list is-circle">
+          <li>Good morning.</li>
+          <li>Thou hast had a good night's sleep, I hope.</li>
+          <li>Thou hast had a good afternoon</li>
+          <li>Good night.</li>
+        </ul>
+      </div>
+<!-- <h1>Welcome!! you entered a right password</h1> -->
 </body>
 </html>
