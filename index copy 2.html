@@ -81,20 +81,7 @@
         <button type="submit" class="nes-btn is-primary" onclick="checkPswd(event);">Submit</button>
     </form>
 
-    <!-- Custom dialog -->
-    <section>
-        <dialog class="nes-dialog" id="dialog-alert">
-            <form method="dialog">
-                <p class="title">Alert</p>
-                <p id="dialog-alert-message"></p>
-                <menu class="dialog-menu">
-                    <button class="nes-btn" onclick="closeDialog()">OK</button>
-                </menu>
-            </form>
-        </dialog>
-    </section>
-
-    <!-- Function to check if the password matches the expected password -->
+    <!--Function to check if the password matches the expected password-->
     <script type="text/javascript">
         function checkPswd(event) {
             event.preventDefault(); // Prevents the form from submitting
@@ -105,20 +92,8 @@
                 window.location.href = "welcome.html";
             }
             else {
-                openAlertDialog("Passwords do not match.");
+                alert("Passwords do not match.");
             }
-        }
-
-        function openAlertDialog(message) {
-            var dialogAlert = document.getElementById("dialog-alert");
-            var dialogAlertMessage = document.getElementById("dialog-alert-message");
-            dialogAlertMessage.textContent = message;
-            dialogAlert.showModal();
-        }
-
-        function closeDialog() {
-            var dialogAlert = document.getElementById("dialog-alert");
-            dialogAlert.close();
         }
     </script>
 </body>

@@ -65,12 +65,38 @@
                 margin-top: 260px;
             }
         }
+
+        /* Custom dialog styles */
+        .custom-dialog {
+            max-width: 300px; /* Adjust the width as needed */
+            padding: 16px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-dialog .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .custom-dialog p {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        .custom-dialog button {
+            font-size: 14px;
+            padding: 8px 16px;
+        }
     </style>
 </head>
 
 
 <body>
-    <h1 class="heading-text">Hello World!</h1>
+    <h1 class="heading-text">Freddie & Sue: Partners in Crime</h1>
     <form class="nes-container">
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
@@ -83,7 +109,7 @@
 
     <!-- Custom dialog -->
     <section>
-        <dialog class="nes-dialog" id="dialog-alert">
+        <dialog class="custom-dialog" id="dialog-alert">
             <form method="dialog">
                 <p class="title">Alert</p>
                 <p id="dialog-alert-message"></p>
