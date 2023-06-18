@@ -19,42 +19,47 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column;
         }
 
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
-            max-width: 300px;
-            width: 80%;
-            padding: 20px;
+            max-width: 350px; /* Updated this line */
+            width: 100%;
+            padding: 1px;
             background-color: rgba(255, 255, 255, 0.8);
+       
         }
 
         .form-group {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .form-group:last-child {
-            margin-bottom: 20px;
+            margin-bottom: 5px;
         }
 
-         /* Added styles for mobile devices */
-         @media (max-width: 480px) {
-            form {
-                max-width: 240px;
-            }
+        /* Reduce the font size for labels and inputs */
+        label, input {
+            font-size: 16px;
+        }
+        button[type="submit"] {
+            font-size: 14px;
+            padding: 4px 10px;
+        }
 
-            .password-container {
-                position: absolute;
-                width: 50%;
-                top: 100%;
-                left: 50%;
-                transform: translateX(-50%);
+        @media (max-width: 480px) {
+            form {
+                max-width: 220px; /* Updated this line */
+                margin-top: 470px;
             }
         }
     </style>
 </head>
+
+
 <body>
     <form class="nes-container">
         <div class="form-group">
