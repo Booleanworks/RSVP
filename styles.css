@@ -10,3 +10,6 @@ form {
     height: fit-content;
     padding: 10px 10px;
 }
+.larger-font {
+    font-size: 20px;
+}
