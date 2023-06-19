@@ -109,7 +109,7 @@
 
 <body>
     <audio id="myAudio" autoplay>
-        <source src="sound/kirbys_sound_1.mp3" type="audio/mpeg">
+        <source src="sound/kirbys_sound_1.mp3" loop controls type="audio/mpeg">
     </audio>
     
     <h1 class="heading-text"><span class="larger-font">Freddie &amp; Sue</span> <br>'Partners in Crime 2023'</h1>
@@ -138,7 +138,7 @@
     <!-- Audio button -->
     <div class="audio-button" onclick="toggleAudio()">
         <i class="nes-logo"></i>
-        <span class="audio-button-text">audio</span>
+        <span class="audio-button-text">press</span>
     </div>
 
     <!-- Embed the sound using JavaScript -->
@@ -149,7 +149,7 @@
 
         function toggleAudio() {
             audio.muted = !audio.muted;
-            audioButtonText.textContent = audio.muted ? "audio" : "mute";
+            audioButtonText.textContent = audio.muted ? "press" : "mute";
         }
 
         function checkPswd(event) {
