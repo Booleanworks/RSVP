@@ -29,17 +29,14 @@
             margin-top: 150px;
         }
 
-
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
-            max-width: 350px; /* Updated this line */
+            max-width: 350px;
             width: 100%;
             padding: 1px;
             background-color: rgba(255, 255, 255, 0.332);
-    
-       
         }
 
         .form-group {
@@ -54,6 +51,7 @@
         label, input {
             font-size: 16px;
         }
+
         button[type="submit"] {
             font-size: 14px;
             padding: 4px 10px;
@@ -61,14 +59,14 @@
 
         @media (max-width: 480px) {
             form {
-                max-width: 220px; /* Updated this line */
+                max-width: 220px;
                 margin-top: 250px;
             }
         }
 
         /* Custom dialog styles */
         .custom-dialog {
-            max-width: 300px; /* Adjust the width as needed */
+            max-width: 300px;
             padding: 16px;
             text-align: center;
             background-color: #fff;
@@ -91,28 +89,36 @@
             font-size: 14px;
             padding: 8px 16px;
         }
+
+        /* Custom styles for the audio button */
+        .audio-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            cursor: pointer;
+        }
+
+        .audio-button-text {
+            font-size: 10px;
+        }
     </style>
 </head>
 
 <body>
-    <audio id="myAudio" muted autoplay>
-        <source src="sound\kirbys_sound_1.mp3" type="audio/mpeg">
-      </audio>
-      
-      <script>
-        var audio = document.getElementById("myAudio");
-        audio.muted = false;
-      </script>
-      
-
+    <audio id="myAudio" autoplay>
+        <source src="sound/kirbys_sound_1.mp3" type="audio/mpeg">
+    </audio>
+    
     <h1 class="heading-text"><span class="larger-font">Freddie &amp; Sue</span> <br>'Partners in Crime 2023'</h1>
     <form class="nes-container">
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control nes-input" id="pswd" placeholder="0000">
         </div>
-        <div class="form-group form-check">
-        </div>
+        <div class="form-group form-check"></div>
         <button type="submit" class="nes-btn is-primary" onclick="checkPswd(event);">Submit</button>
     </form>
 
@@ -129,8 +135,23 @@
         </dialog>
     </section>
 
+    <!-- Audio button -->
+    <div class="audio-button" onclick="toggleAudio()">
+        <i class="nes-logo"></i>
+        <span class="audio-button-text">audio</span>
+    </div>
+
     <!-- Embed the sound using JavaScript -->
     <script>
+        var audio = document.getElementById("myAudio");
+        var audioButton = document.querySelector(".audio-button");
+        var audioButtonText = document.querySelector(".audio-button-text");
+
+        function toggleAudio() {
+            audio.muted = !audio.muted;
+            audioButtonText.textContent = audio.muted ? "audio" : "mute";
+        }
+
         function checkPswd(event) {
             event.preventDefault(); // Prevents the form from submitting
     

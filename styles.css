@@ -24,4 +24,8 @@ form {
   .button-container button {
     margin-bottom: 10px;
   }
+/* Custom styles for the toggle button text */
+#toggleButtonText {
+    font-size: 12px;
+  }
   
