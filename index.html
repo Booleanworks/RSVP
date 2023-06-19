@@ -96,12 +96,6 @@
 
 
 <body>
-    <audio autoplay loop>
-        <source src="sound/kirbys_sound_1.mp3" type="audio/mpeg">
-        
-      </audio>
-
-
     <h1 class="heading-text"><span class="larger-font">Freddie &amp; Sue</span> <br>'Partners in Crime 2023'</h1>
     <form class="nes-container">
         <div class="form-group">
@@ -126,8 +120,12 @@
         </dialog>
     </section>
 
-    <!-- Function to check if the password matches the expected password -->
+    <!-- Embed the sound using JavaScript -->
     <script type="text/javascript">
+        var audio = new Audio('sound/kirbys_sound_1.mp3');
+        audio.loop = true;
+        audio.autoplay = true;
+
         function checkPswd(event) {
             event.preventDefault(); // Prevents the form from submitting
     
