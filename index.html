@@ -98,9 +98,8 @@
 <body>
     <audio autoplay loop>
         <source src="sound\kirbys_sound_1.mp3" type="audio/mpeg">
-        <source src="sound\kirbys_sound_1.ogg" type="audio/ogg">
-        <!-- Add more formats if needed -->
-    </audio>
+        
+      </audio>
 
 
     <h1 class="heading-text"><span class="larger-font">Freddie &amp; Sue</span> <br>'Partners in Crime 2023'</h1>
@@ -109,4 +108,50 @@
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control nes-input" id="pswd" placeholder="0000">
         </div>
-        <div class
+        <div class="form-group form-check">
+        </div>
+        <button type="submit" class="nes-btn is-primary" onclick="checkPswd(event);">Submit</button>
+    </form>
+
+    <!-- Custom dialog -->
+    <section>
+        <dialog class="custom-dialog" id="dialog-alert">
+            <form method="dialog">
+                <p class="title">WHAAAT!</p>
+                <p id="dialog-alert-message"></p>
+                <menu class="dialog-menu">
+                    <button class="nes-btn" onclick="closeDialog()">OK</button>
+                </menu>
+            </form>
+        </dialog>
+    </section>
+
+    <!-- Function to check if the password matches the expected password -->
+    <script type="text/javascript">
+        function checkPswd(event) {
+            event.preventDefault(); // Prevents the form from submitting
+    
+            var confirmPassword = "violin";
+            var password = document.getElementById("pswd").value;
+            if (password == confirmPassword) {
+                window.location.href = "welcome.html";
+            }
+            else {
+                openAlertDialog("Try again");
+            }
+        }
+
+        function openAlertDialog(message) {
+            var dialogAlert = document.getElementById("dialog-alert");
+            var dialogAlertMessage = document.getElementById("dialog-alert-message");
+            dialogAlertMessage.textContent = message;
+            dialogAlert.showModal();
+        }
+
+        function closeDialog() {
+            var dialogAlert = document.getElementById("dialog-alert");
+            dialogAlert.close();
+        }
+    </script>
+</body>
+</html>
