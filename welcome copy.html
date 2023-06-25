@@ -8,19 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
     
-    <style>
-        .nes-btn-map {
-            margin: 10px;
-        }
-    </style>
-    
     <script>
         function redirectToRSVP() {
-            window.open("rsvp.html", "_blank");
-        }
-        
-        function redirectToInfo() {
-            window.location.href = "info.html";
+            window.location.href = "rsvp.html";
         }
     </script>
 </head>
@@ -28,10 +18,9 @@
     <div class="nes-container with-title">
         <span class="title">Menu</span> 
         <div class="button-container">
-            <button class="nes-btn is-error" onclick="redirectToInfo()">Info</button>
-            <a href="https://goo.gl/maps/v36UQdr8TwZL8Nky7" target="_blank" class="nes-btn nes-btn-map">Map</a>
+            <button class="nes-btn">Info</button>
             <button class="nes-btn is-warning" onclick="redirectToRSVP()">RSVP</button>
-            <button class="nes-btn is-primary">More</button>
+            <button class="nes-btn is-primary">Map</button>
         </div>
     </div>
 </body>
