@@ -22,16 +22,21 @@
         function redirectToInfo() {
             window.location.href = "info.html";
         }
+
+        function redirectToGift() {
+            window.location.href = "gift.html";
+        }
+
     </script>
 </head>
 <body>
     <div class="nes-container with-title">
         <span class="title">Menu</span> 
         <div class="button-container">
-            <button class="nes-btn is-error" onclick="redirectToInfo()">Info</button>
-            <a href="https://goo.gl/maps/v36UQdr8TwZL8Nky7" target="_blank" class="nes-btn nes-btn-map">Map</a>
-            <button class="nes-btn is-warning" onclick="redirectToRSVP()">RSVP</button>
-            <button class="nes-btn is-primary">More</button>
+            <button class="nes-btn is-error" onclick="redirectToInfo()">About</button>
+            <button class="nes-btn is-primary" onclick="redirectToRSVP()">RSVP</button>
+            <a href="https://goo.gl/maps/v36UQdr8TwZL8Nky7" target="_blank" class="nes-btn is-success">Map</a>
+            <button class="nes-btn nes-btn-map" onclick="redirectToGift()" >Gift</button>
         </div>
     </div>
 </body>
