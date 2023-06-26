@@ -108,7 +108,7 @@
 </head>
 
 <body>
-    <audio id="myAudio" autoplay>
+    <audio id="myAudio">
         <source src="sound/kirbys_sound_1.mp3" loop controls type="audio/mpeg">
     </audio>
     
@@ -148,8 +148,13 @@
         var audioButtonText = document.querySelector(".audio-button-text");
 
         function toggleAudio() {
-            audio.muted = !audio.muted;
-            audioButtonText.textContent = audio.muted ? "press" : "mute";
+            if (audio.paused) {
+                audio.play();
+                audioButtonText.textContent = "mute";
+            } else {
+                audio.pause();
+                audioButtonText.textContent = "press";
+            }
         }
 
         function checkPswd(event) {
